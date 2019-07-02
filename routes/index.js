@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
   var MongoClient = mongodb.MongoClient;
  
   // Define where the MongoDB server is
-  var url = 'mongodb://admin:tiisc00l@ds243963.mlab.com:43963/twilight_imperium';
+  var url = 'mongodb://USERNAME:PASS@ds243963.mlab.com:43963/twilight_imperium';
  
   // Connect to the server
   MongoClient.connect(url, function (err, db) {
