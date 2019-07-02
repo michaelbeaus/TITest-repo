@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  a(href='/') back
+  br
+  h3.
+    Lookup Cards
+  table
+    each card, i in cardlist
+      tr
+        td #{card.owner}
+        td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        td(style='white-space:nowrap') #{card.card_name}
+        td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        td
+         form(name="updatecard", method="post", action="/updatecard")
+          table
+           tr
+            input(type="hidden" name="_id" value="#{card._id}")
+            td 
+             input(type="radio", name="owner", value="/")
+            td discard(/)
+            td 
+             input(type="radio", name="owner", value="deck")
+            td deck
+            td 
+             button(type="submit") update
+        td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        td
+         i #{card.text}
+        

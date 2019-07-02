@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  a(href='/') back
+  br
+  h2.
+   You Drew:
+  br
+  each card, i in cardlist
+   h3 #{card.card_name}
+   i #{card.text}   

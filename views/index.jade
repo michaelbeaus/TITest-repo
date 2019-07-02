@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Note: there is no undo button so be careful!
+   br
+   | When you put in your name, always use the same spelling and capitalization.
+  hr
+  br
+  div
+   h2 Draw a Card
+   | Cards in Deck: 
+   b= decksize
+   br
+   br
+   form(name="drawcard", method="post", action="/drawcard")
+    input(type="text", placeholder="your name", name="owner") 
+    button(type="submit") draw
+  br
+  br
+  hr
+  br
+  div
+   h2 Lookup Your Cards
+   form(name="lookupname", method="post", action="/lookupcard")
+    input(type="text", placeholder="your name", name="owner") 
+    button(type="submit") lookup
