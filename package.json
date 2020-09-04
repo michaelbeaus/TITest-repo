@@ -12,7 +12,7 @@
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "kerberos": "~0.0.17",
+    "kerberos": "~1.0.0",
     "mongodb": "~2.0.33"
   }
 }
